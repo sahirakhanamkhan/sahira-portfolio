@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheik Sahira | Strategic IT Talent Acquisition Specialist</title>
+  <link rel="icon" type="image/png" href="assests/sahira.png">
+  <link rel="apple-touch-icon" href="assests/sahira.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --dark:       #0B2416;
+      --dark2:      #0D2B1C;
+      --green:      #2ECC74;
+      --green-d:    #25A85E;
+      --green-pale: #E8FFF2;
+      --white:      #FFFFFF;
+      --gray-bg:    #F5F8F5;
+      --gray-light: #E8EDE8;
+      --text:       #0F1A0C;
+      --text-2:     #4A5568;
+      --text-3:     #718096;
+      --border:     #E2E8E0;
+      --sh-sm:  0 2px 8px rgba(0,0,0,.08);
+      --sh-md:  0 8px 24px rgba(0,0,0,.12);
+      --sh-lg:  0 20px 60px rgba(0,0,0,.16);
+      --r-sm: 8px; --r-md: 16px; --r-lg: 24px; --r-xl: 32px;
+    }
+
+    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+
+    /* ── NAV ─────────────────────────────────── */
+    nav {
+      position:fixed; inset:0 0 auto; z-index:1000;
+      background:rgba(11,36,22,.95); backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.07); padding:0 5%;
+    }
+    .nav-in {
+      max-width:1280px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; height:72px;
+    }
+    .logo { font-size:1.45rem; font-weight:800; color:#fff; text-decoration:none; letter-spacing:-.5px; }
+    .logo span { color:var(--green); }
+    .nav-links { display:flex; gap:28px; list-style:none; }
+    .nav-links a { color:rgba(255,255,255,.75); text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
+    .nav-links a:hover { color:var(--green); }
+    .nav-acts { display:flex; gap:10px; align-items:center; }
+    .btn-ghost { padding:9px 20px; border:1.5px solid rgba(255,255,255,.35); color:#fff; background:transparent; border-radius:50px; font-size:.85rem; font-weight:500; text-decoration:none; transition:all .2s; }
+    .btn-ghost:hover { border-color:#fff; background:rgba(255,255,255,.08); }
+    .btn-nav { padding:9px 22px; background:var(--green); color:var(--dark); border:none; border-radius:50px; font-size:.85rem; font-weight:700; text-decoration:none; transition:all .2s; }
+    .btn-nav:hover { background:var(--green-d); box-shadow:0 4px 16px rgba(46,204,116,.4); }
+
+    /* ── HERO ────────────────────────────────── */
+    #hero {
+      background:var(--dark); min-height:100vh;
+      display:flex; align-items:center; padding:100px 5% 70px;
+      position:relative; overflow:hidden;
+    }
+    #hero::before {
+      content:''; position:absolute; top:-40%; right:-8%; width:640px; height:640px;
+      background:radial-gradient(circle,rgba(46,204,116,.07) 0%,transparent 68%); pointer-events:none;
+    }
+    .hero-in {
+      max-width:1280px; margin:0 auto; width:100%;
+      display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center;
+    }
+    .h-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(46,204,116,.1); border:1px solid rgba(46,204,116,.28);
+      color:var(--green); padding:6px 16px; border-radius:50px;
+      font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.8px; margin-bottom:22px;
+    }
+    .h-badge::before { content:''; width:6px; height:6px; background:var(--green); border-radius:50%; flex-shrink:0; }
+    .h-title {
+      font-size:clamp(2.1rem,3.8vw,3.3rem); font-weight:800; color:#fff;
+      line-height:1.14; letter-spacing:-.8px; margin-bottom:20px;
+    }
+    .h-title .hl { color:var(--green); }
+    .h-sub { font-size:1rem; color:rgba(255,255,255,.68); line-height:1.72; margin-bottom:14px; font-weight:400; }
+    .h-desc { font-size:.875rem; color:rgba(255,255,255,.48); line-height:1.72; margin-bottom:36px; }
+    .h-ctas { display:flex; gap:14px; align-items:center; margin-bottom:46px; flex-wrap:wrap; }
+    .btn-hprimary {
+      padding:14px 30px; background:var(--green); color:var(--dark); border:none; border-radius:50px;
+      font-size:.95rem; font-weight:700; text-decoration:none; transition:all .3s;
+      display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif;
+    }
+    .btn-hprimary:hover { background:#25b865; transform:translateY(-2px); box-shadow:0 8px 24px rgba(46,204,116,.42); }
+    .btn-hsecond {
+      padding:14px 30px; background:transparent; color:#fff;
+      border:1.5px solid rgba(255,255,255,.3); border-radius:50px;
+      font-size:.95rem; font-weight:500; text-decoration:none; transition:all .3s;
+    }
+    .btn-hsecond:hover { border-color:var(--green); color:var(--green); }
+    .h-ministats { display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+    .mstat { display:flex; flex-direction:column; }
+    .mstat-v { font-size:1.45rem; font-weight:800; color:#fff; letter-spacing:-.4px; line-height:1; }
+    .mstat-l { font-size:.72rem; color:rgba(255,255,255,.45); margin-top:3px; }
+    .mstat-div { width:1px; height:44px; background:rgba(255,255,255,.18); }
+
+    /* Hero image */
+    .hero-img-wrap { position:relative; display:flex; justify-content:center; align-items:flex-end; }
+    .hero-frame {
+      position:relative; width:420px; height:510px; border-radius:var(--r-xl); overflow:hidden;
+      background:linear-gradient(135deg,rgba(46,204,116,.14),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .hero-frame img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .fc {
+      position:absolute; background:#fff; border-radius:var(--r-md); padding:12px 18px;
+      box-shadow:var(--sh-lg); display:flex; align-items:center; gap:10px; min-width:152px;
+      animation:floatY 4s ease-in-out infinite;
+    }
+    .fc:nth-child(2) { animation-delay:.8s; }
+    .fc:nth-child(3) { animation-delay:1.6s; }
+    @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .fc-1 { top:-18px; right:-28px; }
+    .fc-2 { bottom:70px; left:-38px; }
+    .fc-3 { top:150px; right:-38px; }
+    .fc-icon { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+    .fc-icon.g { background:var(--green-pale); color:var(--green-d); }
+    .fc-icon.b { background:#EBF4FF; color:#3B82F6; }
+    .fc-icon.o { background:#FFF7ED; color:#F97316; }
+    .fc-val { font-size:1.1rem; font-weight:800; color:var(--text); letter-spacing:-.3px; line-height:1; }
+    .fc-lbl { font-size:.65rem; color:var(--text-3); margin-top:2px; }
+
+    /* ── STATS STRIP ─────────────────────────── */
+    #strip { background:#fff; padding:36px 5%; border-bottom:1px solid var(--border); }
+    .strip-in {
+      max-width:1280px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    }
+    .s-badge { display:flex; align-items:center; gap:12px; }
+    .s-badge-icon { width:46px; height:46px; background:var(--green); border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.1rem; flex-shrink:0; animation:badgePulse 2.5s ease-in-out infinite; }
+    @keyframes badgePulse { 0%,100%{box-shadow:0 0 0 0 rgba(46,204,116,.5)} 60%{box-shadow:0 0 0 14px rgba(46,204,116,0)} }
+    .s-badge strong { display:block; font-size:.95rem; font-weight:700; color:var(--text); }
+    .s-badge span { font-size:.72rem; color:var(--text-3); }
+    .s-div { width:1px; height:46px; background:var(--border); }
+    .s-stat { display:flex; flex-direction:column; align-items:center; text-align:center; padding:10px 14px; border-radius:var(--r-md); transition:background .25s; cursor:default; }
+    .s-stat:hover { background:var(--green-pale); }
+    .s-stat-v { font-size:1.9rem; font-weight:800; color:var(--text); letter-spacing:-.8px; line-height:1; display:inline-block; transition:color .25s, transform .25s; }
+    .s-stat:hover .s-stat-v { color:var(--green-d); transform:scale(1.1); }
+    .s-stat-l { font-size:.72rem; color:var(--text-3); font-weight:500; margin-top:4px; transition:color .25s; }
+    .s-stat:hover .s-stat-l { color:var(--green-d); }
+
+    /* ── CLIENTS ─────────────────────────────── */
+    #clients { background:#fff; padding:52px 0; }
+    .sec-label { text-align:center; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.8px; color:var(--text-3); margin-bottom:36px; padding:0 5%; }
+    .marquee-rows { display:flex; flex-direction:column; gap:18px; }
+    .marquee-wrap { overflow:hidden; position:relative; padding:6px 0; }
+    .marquee-wrap::before,
+    .marquee-wrap::after { content:''; position:absolute; top:0; bottom:0; width:140px; z-index:2; pointer-events:none; }
+    .marquee-wrap::before { left:0; background:linear-gradient(to right,#fff 55%,transparent 100%); }
+    .marquee-wrap::after  { right:0; background:linear-gradient(to left,#fff 55%,transparent 100%); }
+    .marquee-track { display:flex; align-items:center; width:max-content; }
+    .marquee-track.ltr { animation:scrollLTR 50s linear infinite; }
+    .marquee-track.rtl { animation:scrollRTL 50s linear infinite; }
+    .logo-item { padding:0 32px; display:flex; align-items:center; justify-content:center; height:64px; }
+    .logo-item img { height:44px; width:auto; max-width:140px; object-fit:contain; opacity:.85; transition:opacity .2s, transform .2s; display:block; }
+    .logo-item img:hover { opacity:1; transform:scale(1.08); }
+    @keyframes scrollLTR { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    @keyframes scrollRTL { 0%{transform:translateX(-50%)} 100%{transform:translateX(0)} }
+
+    /* ── GENERIC SECTION HEADERS ─────────────── */
+    .sec-hdr { text-align:center; margin-bottom:52px; }
+    .sec-tag { display:inline-block; background:var(--green-pale); color:var(--green-d); font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:5px 14px; border-radius:50px; margin-bottom:14px; }
+    .sec-title { font-size:clamp(1.7rem,2.8vw,2.5rem); font-weight:800; color:var(--text); letter-spacing:-.7px; line-height:1.2; margin-bottom:14px; }
+    .sec-desc { font-size:.95rem; color:var(--text-2); max-width:560px; margin:0 auto; line-height:1.72; }
+
+    /* ── EXPERTISE ───────────────────────────── */
+    #expertise { background:var(--gray-bg); padding:86px 5%; }
+    .exp-in { max-width:1280px; margin:0 auto; }
+    .exp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .exp-card {
+      background:#fff; border-radius:var(--r-lg); padding:34px 28px;
+      border:1px solid var(--border); transition:all .3s; position:relative; overflow:hidden;
+    }
+    .exp-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--green); transform:scaleX(0); transition:transform .3s; transform-origin:left; }
+    .exp-card:hover { transform:translateY(-6px); box-shadow:var(--sh-lg); }
+    .exp-card:hover::after { transform:scaleX(1); }
+    .exp-icon { width:54px; height:54px; background:var(--green-pale); border-radius:var(--r-md); display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:18px; color:var(--green-d); }
+    .exp-lbl { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:var(--green-d); margin-bottom:6px; }
+    .exp-card h3 { font-size:1.15rem; font-weight:700; color:var(--text); margin-bottom:10px; }
+    .exp-card p { font-size:.875rem; color:var(--text-2); line-height:1.7; margin-bottom:16px; }
+    .exp-benefit { display:flex; align-items:flex-start; gap:8px; padding:10px 14px; background:var(--green-pale); border-radius:var(--r-sm); font-size:.8rem; color:var(--green-d); font-weight:500; line-height:1.5; }
+    .exp-benefit::before { content:'✓'; font-weight:700; flex-shrink:0; }
+
+    /* ── SPECIALIZATIONS ─────────────────────── */
+    #spec { background:#fff; padding:86px 5%; }
+    .spec-in { max-width:1280px; margin:0 auto; }
+    .spec-grid { display:grid; grid-template-columns:1fr 1.6fr; gap:28px; align-items:start; }
+    .spec-main {
+      background:var(--dark); border-radius:var(--r-xl); padding:38px;
+      color:#fff;
+    }
+    .spec-main .c-badge { display:inline-block; background:rgba(46,204,116,.12); color:var(--green); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:5px 14px; border-radius:50px; margin-bottom:18px; border:1px solid rgba(46,204,116,.25); }
+    .spec-main h3 { font-size:1.45rem; font-weight:800; margin-bottom:8px; }
+    .spec-main .sub { font-size:.82rem; color:rgba(255,255,255,.55); margin-bottom:26px; line-height:1.6; }
+    .lvl-list { display:flex; flex-direction:column; gap:9px; margin-bottom:26px; }
+    .lvl-item { display:flex; align-items:center; gap:11px; padding:11px 15px; background:rgba(255,255,255,.055); border-radius:var(--r-sm); border:1px solid rgba(255,255,255,.07); }
+    .lvl-dot { width:7px; height:7px; background:var(--green); border-radius:50%; flex-shrink:0; }
+    .lvl-name { font-size:.845rem; color:rgba(255,255,255,.82); font-weight:500; flex:1; }
+    .lvl-badge { font-size:.65rem; padding:3px 9px; background:rgba(46,204,116,.14); color:var(--green); border-radius:50px; font-weight:700; margin-left:auto; flex-shrink:0; }
+    .spec-side { display:grid; grid-template-columns:1fr; gap:12px; }
+    .spec-mini { background:var(--gray-bg); border-radius:var(--r-md); padding:16px 18px; border:1px solid var(--border); transition:all .2s; }
+    .spec-mini:hover { border-color:var(--green); background:#fff; box-shadow:var(--sh-sm); }
+    .spec-mini h4 { font-size:.85rem; font-weight:700; color:var(--text); margin-bottom:9px; display:flex; align-items:center; gap:7px; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; }
+    .tag { font-size:.72rem; padding:4px 11px; background:#fff; border:1px solid var(--border); border-radius:50px; color:var(--text-2); font-weight:500; }
+
+    /* ── STATS DETAIL ────────────────────────── */
+    #stats { background:var(--gray-bg); padding:86px 5%; }
+    .stats-in { max-width:1280px; margin:0 auto; }
+    .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .stat-card { background:#fff; border-radius:var(--r-lg); padding:24px 20px; border:1px solid var(--border); text-align:center; transition:all .3s; display:flex; flex-direction:column; align-items:center; }
+    .stat-card:hover { transform:translateY(-4px); box-shadow:var(--sh-md); }
+    .stat-card.feat { background:var(--dark); border-color:transparent; }
+    .stat-emoji { font-size:1.5rem; margin-bottom:8px; line-height:1; }
+    .stat-v { font-size:2.2rem; font-weight:800; color:var(--text); letter-spacing:-1px; line-height:1; margin-bottom:5px; }
+    .stat-card.feat .stat-v { color:var(--green); }
+    .stat-lbl { font-size:.82rem; font-weight:700; color:var(--text); margin-bottom:8px; line-height:1.3; }
+    .stat-card.feat .stat-lbl { color:#fff; }
+    .stat-desc { font-size:.72rem; color:var(--text-3); line-height:1.55; padding-top:8px; border-top:1px solid var(--border); width:100%; }
+    .stat-card.feat .stat-desc { color:rgba(255,255,255,.45); border-top-color:rgba(255,255,255,.1); }
+
+    /* ── SUCCESS STORIES ─────────────────────── */
+    #stories { background:#fff; padding:86px 5%; }
+    .stories-in { max-width:1280px; margin:0 auto; }
+    .stories-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .story { background:#fff; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--border); transition:all .3s; }
+    .story:hover { transform:translateY(-4px); box-shadow:var(--sh-md); }
+    .story-hdr { background:var(--dark); padding:22px; position:relative; }
+    .story-num { position:absolute; top:14px; right:18px; font-size:3.8rem; font-weight:900; color:rgba(46,204,116,.11); line-height:1; }
+    .story-cat { display:inline-block; background:rgba(46,204,116,.14); color:var(--green); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.9px; padding:4px 11px; border-radius:50px; margin-bottom:11px; }
+    .story-title { font-size:1rem; font-weight:700; color:#fff; line-height:1.42; }
+    .story-body { padding:22px; }
+    .res-list { list-style:none; display:flex; flex-direction:column; gap:9px; margin-bottom:18px; }
+    .res-list li { display:flex; align-items:flex-start; gap:7px; font-size:.845rem; color:var(--text-2); line-height:1.5; }
+    .res-list li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+    .story-quote { background:var(--gray-bg); border-radius:var(--r-sm); padding:14px 16px; font-size:.8rem; color:var(--text-2); font-style:italic; line-height:1.65; border-left:3px solid var(--green); }
+
+    /* ── PROCESS ─────────────────────────────── */
+    #process { background:var(--dark); padding:86px 5%; }
+    .proc-in { max-width:1280px; margin:0 auto; }
+    .proc-in .sec-tag { background:rgba(46,204,116,.1); color:var(--green); }
+    .proc-in .sec-title { color:#fff; }
+    .proc-in .sec-desc { color:rgba(255,255,255,.55); }
+    .proc-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; position:relative; }
+    .proc-grid::before { content:''; position:absolute; top:34px; left:12%; right:12%; height:1px; background:linear-gradient(90deg,transparent,rgba(46,204,116,.28),rgba(46,204,116,.28),transparent); }
+    .proc-card { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:var(--r-lg); padding:26px 22px; text-align:center; transition:all .3s; }
+    .proc-card:hover { background:rgba(46,204,116,.07); border-color:rgba(46,204,116,.22); transform:translateY(-4px); }
+    .proc-num { width:46px; height:46px; background:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; font-weight:800; color:var(--dark); margin:0 auto 18px; position:relative; z-index:1; }
+    .proc-icon { font-size:1.5rem; display:block; margin-bottom:14px; }
+    .proc-card h3 { font-size:.95rem; font-weight:700; color:#fff; margin-bottom:10px; }
+    .proc-card p { font-size:.82rem; color:rgba(255,255,255,.5); line-height:1.65; margin-bottom:14px; }
+    .proc-acts { display:flex; flex-direction:column; gap:6px; text-align:left; }
+    .proc-act { display:flex; align-items:flex-start; gap:7px; font-size:.75rem; color:rgba(255,255,255,.45); line-height:1.4; }
+    .proc-act::before { content:'→'; color:var(--green); font-size:.7rem; flex-shrink:0; margin-top:1px; }
+
+    /* ── CTA SECTION ─────────────────────────── */
+    #cta {
+      background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 50%,#0A2010 100%);
+      padding:86px 5%; position:relative; overflow:hidden;
+    }
+    #cta::before { content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:820px; height:420px; background:radial-gradient(ellipse,rgba(46,204,116,.08) 0%,transparent 68%); pointer-events:none; }
+    .cta-in { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:76px; align-items:center; }
+    .cta-left .sec-tag { background:rgba(46,204,116,.1); color:var(--green); }
+    .cta-left .sec-title { color:#fff; text-align:left; margin-bottom:12px; }
+    .cta-hl { color:var(--green); }
+    .cta-desc { font-size:.95rem; color:rgba(255,255,255,.6); line-height:1.72; margin-bottom:34px; max-width:460px; }
+    .cta-btns { display:flex; gap:14px; flex-wrap:wrap; }
+    .btn-cp { padding:15px 32px; background:var(--green); color:var(--dark); border:none; border-radius:50px; font-size:.95rem; font-weight:700; text-decoration:none; transition:all .3s; display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; }
+    .btn-cp:hover { background:#25b865; transform:translateY(-2px); box-shadow:0 8px 24px rgba(46,204,116,.42); }
+    .btn-cs { padding:15px 32px; background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.28); border-radius:50px; font-size:.95rem; font-weight:500; text-decoration:none; transition:all .3s; display:inline-flex; align-items:center; gap:8px; }
+    .btn-cs:hover { border-color:#fff; }
+    .cta-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:var(--r-xl); padding:34px; }
+    .c-hdr { display:flex; align-items:center; gap:14px; margin-bottom:26px; }
+    .c-avatar { width:62px; height:62px; border-radius:50%; overflow:hidden; border:2px solid var(--green); flex-shrink:0; }
+    .c-avatar img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .c-name { font-size:1.05rem; font-weight:700; color:#fff; }
+    .c-title { font-size:.76rem; color:rgba(255,255,255,.48); margin-top:2px; }
+    .c-rows { display:flex; flex-direction:column; gap:13px; }
+    .c-row { display:flex; align-items:center; gap:11px; font-size:.875rem; color:rgba(255,255,255,.7); }
+    .c-icon { width:34px; height:34px; background:rgba(46,204,116,.1); border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--green); font-size:.85rem; flex-shrink:0; }
+    .c-row a { color:rgba(255,255,255,.7); text-decoration:none; transition:color .2s; }
+    .c-row a:hover { color:var(--green); }
+
+    /* ── TRUST ───────────────────────────────── */
+    #trust { background:var(--gray-bg); padding:86px 5%; }
+    .trust-in { max-width:1280px; margin:0 auto; }
+    .trust-box { background:#fff; border-radius:var(--r-xl); border:1px solid var(--border); box-shadow:var(--sh-sm); overflow:hidden; display:grid; grid-template-columns:1fr; }
+    .trust-item { padding:28px 32px; transition:background .2s; }
+    .trust-item:not(:last-child) { border-bottom:1px solid var(--border); }
+    .trust-item:hover { background:var(--green-pale); }
+    .trust-icon { font-size:1.5rem; margin-bottom:10px; }
+    .trust-item h4 { font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .trust-list { list-style:none; display:flex; flex-direction:column; gap:7px; }
+    .trust-list li { display:flex; align-items:flex-start; gap:7px; font-size:.8rem; color:var(--text-2); line-height:1.5; }
+    .trust-list li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+
+    /* ── FAQ ─────────────────────────────────── */
+    #faq { background:var(--gray-bg); padding:86px 5%; }
+    .faq-in { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:76px; align-items:start; }
+    .faq-left .sec-hdr { text-align:left; }
+    .faq-list { display:flex; flex-direction:column; }
+    .faq-item { border-bottom:1px solid var(--border); }
+    .faq-item:first-child { border-top:1px solid var(--border); }
+    .faq-q { width:100%; background:none; border:none; padding:19px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-size:.92rem; font-weight:600; color:var(--text); text-align:left; gap:14px; font-family:'DM Sans',sans-serif; }
+    .faq-tog { width:26px; height:26px; border-radius:50%; background:var(--gray-light); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:.95rem; color:var(--text-3); transition:all .3s; }
+    .faq-item.open .faq-tog { background:var(--green); border-color:var(--green); color:#fff; transform:rotate(45deg); }
+    .faq-ans { max-height:0; overflow:hidden; transition:max-height .4s ease; }
+    .faq-item.open .faq-ans { max-height:280px; }
+    .faq-ans-in { padding-bottom:18px; font-size:.875rem; color:var(--text-2); line-height:1.75; }
+    .faq-vis { position:sticky; top:96px; }
+    .faq-vis-card { background:var(--dark); border-radius:var(--r-xl); padding:38px; color:#fff; }
+    .faq-vis-card h3 { font-size:1.42rem; font-weight:800; margin-bottom:11px; }
+    .faq-vis-card p { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.65; margin-bottom:26px; }
+    .faq-stats { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:24px; }
+    .faq-sbox { background:rgba(255,255,255,.055); border-radius:var(--r-md); padding:16px; border:1px solid rgba(255,255,255,.07); }
+    .faq-sbox .v { font-size:1.7rem; font-weight:800; color:var(--green); letter-spacing:-1px; }
+    .faq-sbox .l { font-size:.7rem; color:rgba(255,255,255,.45); margin-top:2px; }
+    .btn-faq { padding:13px 0; background:var(--green); color:var(--dark); border:none; border-radius:50px; font-size:.9rem; font-weight:700; text-decoration:none; transition:all .3s; display:flex; align-items:center; justify-content:center; gap:8px; width:100%; font-family:'DM Sans',sans-serif; cursor:pointer; }
+    .btn-faq:hover { background:#25b865; box-shadow:0 6px 20px rgba(46,204,116,.38); }
+
+    /* ── NEWSLETTER BAR ──────────────────────── */
+    .nwsl { background:var(--green); padding:22px 5%; }
+    .nwsl-in { max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .nwsl-txt h4 { font-size:1rem; font-weight:700; color:var(--dark); }
+    .nwsl-txt p { font-size:.8rem; color:rgba(11,36,22,.65); margin-top:2px; }
+    .nwsl-form { display:flex; gap:9px; }
+    .nwsl-input { padding:11px 18px; border:none; border-radius:50px; font-size:.85rem; width:270px; font-family:'DM Sans',sans-serif; outline:none; }
+    .nwsl-btn { padding:11px 22px; background:var(--dark); color:#fff; border:none; border-radius:50px; font-size:.85rem; font-weight:700; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all .2s; }
+    .nwsl-btn:hover { background:#071c0e; }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer { background:var(--dark); padding:56px 5% 26px; }
+    .foot-in { max-width:1280px; margin:0 auto; }
+    .foot-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:44px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,.07); margin-bottom:28px; }
+    .foot-logo { font-size:1.38rem; display:block; margin-bottom:14px; }
+    .foot-tag { font-size:.82rem; color:rgba(255,255,255,.45); line-height:1.65; margin-bottom:22px; }
+    .foot-social { display:flex; gap:9px; }
+    .soc-btn { width:36px; height:36px; border-radius:9px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.09); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.55); text-decoration:none; font-size:.85rem; transition:all .2s; }
+    .soc-btn:hover { background:var(--green); border-color:var(--green); color:var(--dark); }
+    .foot-col h5 { font-size:.845rem; font-weight:700; color:#fff; margin-bottom:18px; }
+    .foot-links { list-style:none; display:flex; flex-direction:column; gap:9px; }
+    .foot-links a { color:rgba(255,255,255,.45); text-decoration:none; font-size:.815rem; transition:color .2s; }
+    .foot-links a:hover { color:var(--green); }
+    .foot-c { display:flex; align-items:center; gap:9px; margin-bottom:11px; }
+    .foot-c .ic { color:var(--green); font-size:.8rem; width:14px; flex-shrink:0; }
+    .foot-c span, .foot-c a { color:rgba(255,255,255,.45); font-size:.815rem; text-decoration:none; transition:color .2s; }
+    .foot-c a:hover { color:var(--green); }
+    .foot-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+    .foot-copy { font-size:.76rem; color:rgba(255,255,255,.3); }
+    .foot-copy span { color:var(--green); }
+
+    /* ── HAMBURGER ───────────────────────────── */
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px; z-index:1001; }
+    .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:all .3s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display:none; position:fixed; inset:72px 0 0; background:rgba(11,36,22,.98);
+      backdrop-filter:blur(16px); z-index:999; flex-direction:column;
+      padding:32px 6%; gap:8px; overflow-y:auto;
+    }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a {
+      color:rgba(255,255,255,.8); text-decoration:none; font-size:1.05rem;
+      font-weight:600; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.07);
+      transition:color .2s;
+    }
+    .mobile-menu a:hover { color:var(--green); }
+    .mobile-menu .mm-cta {
+      margin-top:16px; padding:14px 0; background:var(--green); color:var(--dark);
+      border-radius:50px; text-align:center; font-weight:700; border:none;
+    }
+
+    /* ── ANIMATIONS ──────────────────────────── */
+    .fade-up { opacity:0; transform:translateY(28px); transition:opacity .6s ease, transform .6s ease; }
+    .fade-up.vis { opacity:1; transform:translateY(0); }
+
+    /* ══════════════════════════════════════════
+       MOBILE-FIRST RESPONSIVE SYSTEM
+       Base = mobile, scale up with min-width
+    ══════════════════════════════════════════ */
+
+    /* ── Base mobile overrides ── */
+    #hero    { padding:88px 5% 48px; }
+    #strip   { padding:28px 5%; }
+    #clients { padding:36px 5%; }
+    #expertise, #spec, #stats, #stories, #trust { padding:52px 5%; }
+    #process { padding:52px 5%; }
+    #cta     { padding:52px 5%; }
+    #faq     { padding:52px 5%; }
+    .nwsl    { padding:20px 5%; }
+    footer   { padding:44px 5% 22px; }
+
+    .sec-hdr { margin-bottom:36px; }
+
+    /* Grids → 1 col on mobile */
+    .hero-in          { grid-template-columns:1fr; gap:0; }
+    .hero-img-wrap    { display:none; }
+    .exp-grid         { grid-template-columns:1fr; }
+    .spec-grid        { grid-template-columns:1fr; }
+    .spec-side        { grid-template-columns:1fr 1fr; }
+    .stats-grid       { grid-template-columns:1fr 1fr; }
+    .stories-grid     { grid-template-columns:1fr; }
+    .proc-grid        { grid-template-columns:1fr; gap:14px; }
+    .proc-grid::before{ display:none; }
+    .trust-box        { grid-template-columns:1fr; }
+    .cta-in           { grid-template-columns:1fr; gap:32px; }
+    .faq-in           { grid-template-columns:1fr; gap:36px; }
+    .faq-vis          { display:none; }
+    .foot-top         { grid-template-columns:1fr; gap:28px; }
+
+    /* Process card — left-aligned on mobile for readability */
+    .proc-card        { text-align:left; padding:20px 18px; }
+    .proc-num         { margin:0 0 14px; }
+    .proc-icon        { font-size:1.3rem; margin-bottom:10px; }
+    .proc-card h3     { font-size:.9rem; }
+    .proc-card p      { font-size:.8rem; margin-bottom:10px; }
+
+    /* Nav */
+    .nav-links        { display:none; }
+    .btn-ghost        { display:none; }
+    .hamburger        { display:flex; }
+
+    /* Strip */
+    .strip-in         { flex-wrap:wrap; justify-content:center; gap:14px; }
+    .s-div            { display:none; }
+    .s-badge          { width:100%; justify-content:center; margin-bottom:4px; }
+
+    /* Hero text */
+    .h-title          { font-size:clamp(1.9rem,7vw,2.8rem); }
+    .h-sub            { font-size:.9rem; }
+    .h-desc           { font-size:.82rem; }
+    .h-ministats      { gap:16px; }
+    .mstat-v          { font-size:1.25rem; }
+    .h-ctas           { flex-direction:column; align-items:flex-start; }
+    .btn-hprimary,
+    .btn-hsecond      { width:100%; justify-content:center; text-align:center; }
+
+    /* CTA */
+    .cta-left .sec-title { font-size:clamp(1.6rem,6vw,2.2rem); }
+    .cta-btns         { flex-direction:column; }
+    .btn-cp, .btn-cs  { justify-content:center; }
+
+    /* Newsletter */
+    .nwsl-in          { flex-direction:column; align-items:flex-start; gap:16px; }
+    .nwsl-form        { width:100%; flex-direction:column; }
+    .nwsl-input       { width:100%; border-radius:12px; }
+    .nwsl-btn         { border-radius:12px; }
+
+    /* Clients */
+    .marquee-wrap::before,
+    .marquee-wrap::after { width:60px; }
+
+    /* Spec */
+    .spec-main        { padding:28px; }
+    .spec-main h3     { font-size:1.2rem; }
+
+    /* FAQ */
+    .faq-left .sec-hdr { margin-bottom:28px; }
+
+    /* Footer */
+    .foot-bottom      { flex-direction:column; align-items:flex-start; gap:6px; }
+
+    /* ── ≥ 480px ── */
+    @media(min-width:480px){
+      .stats-grid   { grid-template-columns:repeat(2,1fr); }
+      .trust-box    { grid-template-columns:1fr; }
+      .cta-btns     { flex-direction:row; }
+      .btn-hprimary,
+      .btn-hsecond  { width:auto; }
+      .nwsl-form    { flex-direction:row; }
+      .nwsl-input   { border-radius:50px; flex:1; }
+      .nwsl-btn     { border-radius:50px; }
+    }
+
+    /* ── ≥ 600px ── */
+    @media(min-width:600px){
+      .proc-grid    { grid-template-columns:repeat(2,1fr); gap:18px; }
+      .proc-card    { text-align:center; padding:24px 20px; }
+      .proc-num     { margin:0 auto 16px; }
+      .stories-grid { grid-template-columns:repeat(2,1fr); }
+      .exp-grid     { grid-template-columns:repeat(2,1fr); }
+      .h-ctas       { flex-direction:row; }
+    }
+
+    /* ── ≥ 768px ── */
+    @media(min-width:768px){
+      #hero      { padding:100px 5% 70px; }
+      #strip     { padding:36px 5%; }
+      #clients   { padding:46px 5%; }
+      #expertise,#spec,#stats,#stories,#trust { padding:86px 5%; }
+      #process   { padding:86px 5%; }
+      #cta       { padding:86px 5%; }
+      #faq       { padding:86px 5%; }
+      .nwsl      { padding:22px 5%; }
+      footer     { padding:56px 5% 26px; }
+      .sec-hdr   { margin-bottom:52px; }
+
+      .hero-in   { grid-template-columns:1.05fr .95fr; gap:60px; }
+      .hero-img-wrap { display:flex; }
+      .spec-grid { grid-template-columns:1fr 1.6fr; }
+      .spec-side { grid-template-columns:1fr 1fr; }
+      .cta-in    { grid-template-columns:1fr 1fr; gap:76px; }
+      .faq-in    { grid-template-columns:1fr 1fr; gap:76px; }
+      .faq-vis   { display:block; }
+      .foot-top  { grid-template-columns:1fr 1fr; gap:44px; }
+      .nav-links { display:flex; }
+      .btn-ghost { display:inline-block; }
+      .hamburger { display:none; }
+
+      .proc-card { text-align:center; padding:26px 22px; }
+      .proc-num  { margin:0 auto 18px; }
+      .proc-icon { font-size:1.5rem; margin-bottom:14px; }
+      .proc-card h3 { font-size:.95rem; }
+      .proc-card p  { font-size:.82rem; margin-bottom:14px; }
+
+      .cta-btns  { flex-direction:row; }
+      .foot-bottom { flex-direction:row; align-items:center; }
+    }
+
+    /* ── ≥ 1024px ── */
+    @media(min-width:1024px){
+      .proc-grid  { grid-template-columns:repeat(4,1fr); gap:20px; }
+      .proc-grid::before { display:block; }
+      .exp-grid   { grid-template-columns:repeat(3,1fr); }
+      .stories-grid { grid-template-columns:repeat(3,1fr); }
+      .stats-grid { grid-template-columns:repeat(3,1fr); }
+      .trust-box  { grid-template-columns:1fr 1fr; }
+      .trust-item:nth-child(odd)  { border-right:1px solid var(--border); }
+      .trust-item:nth-child(3),
+      .trust-item:nth-child(4)    { border-bottom:none; }
+      .foot-top   { grid-template-columns:1.5fr 1fr 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="navbar">
+  <div class="nav-in">
+    <a href="#" class="logo">Sahira Khanam<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#spec">Domains</a></li>
+      <li><a href="#stories">Success Stories</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-acts">
+      <a href="#cta" class="btn-ghost">View Profile</a>
+      <a href="#cta" class="btn-nav">Connect With Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero"    onclick="closeMobileMenu()">Home</a>
+  <a href="#expertise" onclick="closeMobileMenu()">Expertise</a>
+  <a href="#spec"    onclick="closeMobileMenu()">Domains</a>
+  <a href="#stories" onclick="closeMobileMenu()">Success Stories</a>
+  <a href="#process" onclick="closeMobileMenu()">Process</a>
+  <a href="#faq"     onclick="closeMobileMenu()">FAQ</a>
+  <a href="mailto:sahirakhanamkhan@gmail.com" class="mm-cta" onclick="closeMobileMenu()">Connect With Me</a>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-in">
+
+    <!-- Left: Content -->
+    <div class="hero-content">
+      <div class="h-badge">#1 IT Talent Acquisition Specialist</div>
+      <h1 class="h-title">
+        Strategic IT<br>Talent Acquisition<br>
+        <span class="hl">That Transforms</span><br>
+        Your Hiring Outcomes
+      </h1>
+      <p class="h-sub">
+        Experience seamless recruitment excellence with a proven track record of 50+ strategic placements, 95% candidate retention, and my work with India's leading technology enterprises.
+      </p>
+      <p class="h-desc">
+        From emerging L1 Engineers to senior L3 architects commanding ₹25 LPA — I specialize in building high-performance IT teams that drive organizational growth.
+      </p>
+      <div class="h-ctas">
+        <a href="#cta" class="btn-hprimary"><i class="fas fa-handshake"></i> Connect With Me</a>
+        <a href="#stories" class="btn-hsecond">View Success Stories</a>
+      </div>
+      <div class="h-ministats">
+        <div class="mstat">
+          <span class="mstat-v">50+</span>
+          <span class="mstat-l">IT Placements</span>
+        </div>
+        <div class="mstat-div"></div>
+        <div class="mstat">
+          <span class="mstat-v">₹15+ Lac</span>
+          <span class="mstat-l">Revenue Generated</span>
+        </div>
+        <div class="mstat-div"></div>
+        <div class="mstat">
+          <span class="mstat-v">95%</span>
+          <span class="mstat-l">Retention Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Photo -->
+    <div class="hero-img-wrap">
+      <div class="hero-frame">
+        <img src="assests/sahira.png" alt="Sheik Sahira – IT Talent Acquisition Specialist">
+      </div>
+      <div class="fc fc-1">
+        <div class="fc-icon g"><i class="fas fa-trophy"></i></div>
+        <div>
+          <div class="fc-val">₹25 LPA</div>
+          <div class="fc-lbl">Highest Placement</div>
+        </div>
+      </div>
+      <div class="fc fc-2">
+        <div class="fc-icon b"><i class="fas fa-building"></i></div>
+        <div>
+          <div class="fc-val">29+</div>
+          <div class="fc-lbl">Enterprise Clients</div>
+        </div>
+      </div>
+      <div class="fc fc-3">
+        <div class="fc-icon o"><i class="fas fa-chart-line"></i></div>
+        <div>
+          <div class="fc-val">20+</div>
+          <div class="fc-lbl">Last 3 Months</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ STATS STRIP ══════════════ -->
+<section id="strip">
+  <div class="strip-in">
+    <div class="s-badge">
+      <div class="s-badge-icon"><i class="fas fa-star"></i></div>
+      <div>
+        <strong>#1 IT Recruitment</strong>
+        <span>Specialist · Hyderabad</span>
+      </div>
+    </div>
+    <div class="s-div"></div>
+    <div class="s-stat">
+      <span class="s-stat-v" data-target="50" data-suffix="+">50+</span>
+      <span class="s-stat-l">Strategic Placements</span>
+    </div>
+    <div class="s-div"></div>
+    <div class="s-stat">
+      <span class="s-stat-v" data-target="15" data-prefix="₹" data-suffix="+ Lac">₹15+ Lac</span>
+      <span class="s-stat-l">Revenue Generated</span>
+    </div>
+    <div class="s-div"></div>
+    <div class="s-stat">
+      <span class="s-stat-v" data-target="95" data-suffix="%">95%</span>
+      <span class="s-stat-l">Retention Rate</span>
+    </div>
+    <div class="s-div"></div>
+    <div class="s-stat">
+      <span class="s-stat-v" data-target="25" data-prefix="₹" data-suffix=" LPA">₹25 LPA</span>
+      <span class="s-stat-l">Top CTC Placed</span>
+    </div>
+    <div class="s-div"></div>
+    <div class="s-stat">
+      <span class="s-stat-v" data-target="29" data-suffix="+">29+</span>
+      <span class="s-stat-l">Enterprise Clients</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CLIENTS ══════════════ -->
+<section id="clients">
+  <p class="sec-label">Organizations That Hired Through Me</p>
+  <div class="marquee-rows">
+
+    <!-- Row 1: Left → Right -->
+    <div class="marquee-wrap">
+      <div class="marquee-track ltr">
+        <div class="logo-item"><img src="assests/LTIMindtree logo.webp" alt="LTI Mindtree"></div>
+        <div class="logo-item"><img src="assests/Nipun Net Solutions.png" alt="Nipun Net Solutions"></div>
+        <div class="logo-item"><img src="assests/Tejas Networks.png" alt="Tejas Networks"></div>
+        <div class="logo-item"><img src="assests/iNomax.png" alt="iNomax"></div>
+        <div class="logo-item"><img src="assests/KEYARC IT Solutions.png" alt="KEYARC IT Solutions"></div>
+        <div class="logo-item"><img src="assests/Krishnas Technologies.webp" alt="Krishnas Technologies"></div>
+        <div class="logo-item"><img src="assests/ingrow.png" alt="Ingrow"></div>
+        <div class="logo-item"><img src="assests/Blue Cloud.png" alt="Blue Cloud"></div>
+        <div class="logo-item"><img src="assests/teksystems-logo.svg" alt="TEKsystems"></div>
+        <div class="logo-item"><img src="assests/AimNxt Technologies.png" alt="AimNxt Technologies"></div>
+        <div class="logo-item"><img src="assests/Map Genesis.png" alt="Map Genesis"></div>
+        <!-- duplicate for seamless loop -->
+        <div class="logo-item"><img src="assests/LTIMindtree logo.webp" alt="LTI Mindtree"></div>
+        <div class="logo-item"><img src="assests/Nipun Net Solutions.png" alt="Nipun Net Solutions"></div>
+        <div class="logo-item"><img src="assests/Tejas Networks.png" alt="Tejas Networks"></div>
+        <div class="logo-item"><img src="assests/iNomax.png" alt="iNomax"></div>
+        <div class="logo-item"><img src="assests/KEYARC IT Solutions.png" alt="KEYARC IT Solutions"></div>
+        <div class="logo-item"><img src="assests/Krishnas Technologies.webp" alt="Krishnas Technologies"></div>
+        <div class="logo-item"><img src="assests/ingrow.png" alt="Ingrow"></div>
+        <div class="logo-item"><img src="assests/Blue Cloud.png" alt="Blue Cloud"></div>
+        <div class="logo-item"><img src="assests/teksystems-logo.svg" alt="TEKsystems"></div>
+        <div class="logo-item"><img src="assests/AimNxt Technologies.png" alt="AimNxt Technologies"></div>
+        <div class="logo-item"><img src="assests/Map Genesis.png" alt="Map Genesis"></div>
+      </div>
+    </div>
+
+    <!-- Row 2: Right → Left -->
+    <div class="marquee-wrap">
+      <div class="marquee-track rtl">
+        <div class="logo-item"><img src="assests/Power bridge.webp" alt="Power Bridge"></div>
+        <div class="logo-item"><img src="assests/TTEC Digital..png" alt="TTEC Digital"></div>
+        <div class="logo-item"><img src="assests/lancesoft.png" alt="Lancesoft"></div>
+        <div class="logo-item"><img src="assests/net Kode.png" alt="Net Kode"></div>
+        <div class="logo-item"><img src="assests/KAIZEN..png" alt="KAIZEN"></div>
+        <div class="logo-item"><img src="assests/SALOHI Technologies..png" alt="SALOHI Technologies"></div>
+        <div class="logo-item"><img src="assests/CYART.jpg" alt="CYART"></div>
+        <div class="logo-item"><img src="assests/Root Access Labs.png" alt="Root Access Labs"></div>
+        <div class="logo-item"><img src="assests/NAAPTOL..png" alt="NAAPTOL"></div>
+        <div class="logo-item"><img src="assests/Simansher education..png" alt="Simansher Education"></div>
+        <!-- duplicate for seamless loop -->
+        <div class="logo-item"><img src="assests/Power bridge.webp" alt="Power Bridge"></div>
+        <div class="logo-item"><img src="assests/TTEC Digital..png" alt="TTEC Digital"></div>
+        <div class="logo-item"><img src="assests/lancesoft.png" alt="Lancesoft"></div>
+        <div class="logo-item"><img src="assests/net Kode.png" alt="Net Kode"></div>
+        <div class="logo-item"><img src="assests/KAIZEN..png" alt="KAIZEN"></div>
+        <div class="logo-item"><img src="assests/SALOHI Technologies..png" alt="SALOHI Technologies"></div>
+        <div class="logo-item"><img src="assests/CYART.jpg" alt="CYART"></div>
+        <div class="logo-item"><img src="assests/Root Access Labs.png" alt="Root Access Labs"></div>
+        <div class="logo-item"><img src="assests/NAAPTOL..png" alt="NAAPTOL"></div>
+        <div class="logo-item"><img src="assests/Simansher education..png" alt="Simansher Education"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ EXPERTISE ══════════════ -->
+<section id="expertise">
+  <div class="exp-in">
+    <div class="sec-hdr fade-up">
+      <span class="sec-tag">Recruitment Excellence</span>
+      <h2 class="sec-title">Smooth Process,<br>Outstanding Achievements.</h2>
+      <p class="sec-desc">Before screening a single candidate, I invest time mastering the technical landscape and business requirements of each role — ensuring every placement aligns perfectly with organizational needs.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card fade-up">
+        <div class="exp-icon"><i class="fas fa-magnifying-glass"></i></div>
+        <div class="exp-lbl">Pillar 01</div>
+        <h3>Precision Domain Screening</h3>
+        <p>Deep technical knowledge of each specialization before recruitment begins. Only candidates with proven domain mastery are presented to clients.</p>
+        <div class="exp-benefit">You acquire talent ready to contribute immediately, not candidates requiring extensive onboarding</div>
+      </div>
+      <div class="exp-card fade-up">
+        <div class="exp-icon"><i class="fas fa-check-double"></i></div>
+        <div class="exp-lbl">Pillar 02</div>
+        <h3>Quality-First Candidate Curation</h3>
+        <p>Rigorous multi-stage evaluation with technical and behavioral assessment. Filtered candidate pools achieving a 95% post-placement retention rate.</p>
+        <div class="exp-benefit">Reduce hiring risks, eliminate bad fits, and build teams that stay committed long-term</div>
+      </div>
+      <div class="exp-card fade-up">
+        <div class="exp-icon"><i class="fas fa-handshake"></i></div>
+        <div class="exp-lbl">Pillar 03</div>
+        <h3>Strategic Partnership Approach</h3>
+        <p>Dedicated client consultation, ongoing relationship management, and proactive pipeline building aligned with your growth trajectory.</p>
+        <div class="exp-benefit">Never face skill shortages; scale your IT operations with confidence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SPECIALIZATIONS ══════════════ -->
+<section id="spec">
+  <div class="spec-in">
+    <div class="sec-hdr fade-up">
+      <span class="sec-tag">Domain Expertise</span>
+      <h2 class="sec-title">Expertise Across Critical<br>IT Domains</h2>
+      <p class="sec-desc">Specialized recruitment coverage across the full IT talent spectrum — from networking freshers to senior L3 architects commanding ₹25 LPA+.</p>
+    </div>
+    <div class="spec-grid">
+
+      <!-- Primary: Networking -->
+      <div class="spec-main fade-up">
+        <div class="c-badge">Primary Specialization</div>
+        <h3>Networking &amp; Infrastructure</h3>
+        <p class="sub">End-to-end expertise from freshers to senior architects — up to ₹25 LPA placements</p>
+        <div class="lvl-list">
+          <div class="lvl-item">
+            <div class="lvl-dot"></div>
+            <span class="lvl-name">Networking Freshers &amp; Entry-Level Technicians</span>
+            <span class="lvl-badge">L0</span>
+          </div>
+          <div class="lvl-item">
+            <div class="lvl-dot"></div>
+            <span class="lvl-name">L1 Network Engineers — Tier 1 Support &amp; Monitoring</span>
+            <span class="lvl-badge">L1</span>
+          </div>
+          <div class="lvl-item">
+            <div class="lvl-dot"></div>
+            <span class="lvl-name">L2 Network Engineers — Routing, Switching, Firewall</span>
+            <span class="lvl-badge">L2</span>
+          </div>
+          <div class="lvl-item">
+            <div class="lvl-dot"></div>
+            <span class="lvl-name">L3 Network Architects — Strategic Infrastructure Design</span>
+            <span class="lvl-badge">L3</span>
+          </div>
+          <div class="lvl-item">
+            <div class="lvl-dot"></div>
+            <span class="lvl-name">System Administrators</span>
+            <span class="lvl-badge">SysAdmin</span>
+          </div>
+        </div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.42);">
+          Up to <span style="color:var(--green);font-weight:700;">₹25 LPA</span> for senior L3 placements
+        </div>
+      </div>
+
+      <!-- Secondary Cards -->
+      <div class="spec-side">
+        <div class="spec-mini fade-up">
+          <h4>🛡️ Cybersecurity &amp; InfoSec</h4>
+          <div class="tags">
+            <span class="tag">SOC Analysts</span>
+            <span class="tag">Security Operations</span>
+            <span class="tag">Cybersecurity Specialists</span>
+            <span class="tag">Security Consultants</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>⚙️ DevOps Engineering</h4>
+          <div class="tags">
+            <span class="tag">DevOps Engineers</span>
+            <span class="tag">CI/CD Pipelines</span>
+            <span class="tag">Docker &amp; Kubernetes</span>
+            <span class="tag">Terraform</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>📋 Project Management</h4>
+          <div class="tags">
+            <span class="tag">Project Managers</span>
+            <span class="tag">Scrum Masters</span>
+            <span class="tag">Program Coordinators</span>
+            <span class="tag">IT Project Leads</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>🤖 AI &amp; Data Science</h4>
+          <div class="tags">
+            <span class="tag">AI Engineers</span>
+            <span class="tag">ML Engineers</span>
+            <span class="tag">Data Scientists</span>
+            <span class="tag">LLM / GenAI</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>💻 Software Development</h4>
+          <div class="tags">
+            <span class="tag">Java Developers</span>
+            <span class="tag">Python Developers</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Microservices</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>☁️ Cloud &amp; AWS</h4>
+          <div class="tags">
+            <span class="tag">AWS Engineers</span>
+            <span class="tag">Cloud Architects</span>
+            <span class="tag">Azure / GCP</span>
+            <span class="tag">Cloud Infrastructure</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>🌐 Network Engineering</h4>
+          <div class="tags">
+            <span class="tag">Network Engineers</span>
+            <span class="tag">CCNA / CCNP</span>
+            <span class="tag">Cisco &amp; Juniper</span>
+            <span class="tag">NOC Support</span>
+          </div>
+        </div>
+        <div class="spec-mini fade-up">
+          <h4>🏗️ Solution Architecture</h4>
+          <div class="tags">
+            <span class="tag">Solution Architects</span>
+            <span class="tag">Enterprise Architects</span>
+            <span class="tag">Pre-Sales Technical</span>
+            <span class="tag">Cloud Solutions</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS DETAIL ══════════════ -->
+<section id="stats">
+  <div class="stats-in">
+    <div class="sec-hdr fade-up">
+      <span class="sec-tag">Proven Results</span>
+      <h2 class="sec-title">Proven Excellence in IT<br>Talent Acquisition</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card fade-up">
+        <div class="stat-emoji">🏆</div>
+        <div class="stat-v">50+</div>
+        <div class="stat-lbl">Strategic IT Placements</div>
+        <div class="stat-desc">Networking · Cyber · Infra · Dev</div>
+      </div>
+      <div class="stat-card feat fade-up">
+        <div class="stat-emoji">💰</div>
+        <div class="stat-v">₹15+ Lac</div>
+        <div class="stat-lbl">Placement Revenue</div>
+        <div class="stat-desc">External & internal talent programs</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-emoji">🤝</div>
+        <div class="stat-v">29+</div>
+        <div class="stat-lbl">Enterprise Clients</div>
+        <div class="stat-desc">LTI Mindtree · KEYARC · Tejas & more</div>
+      </div>
+      <div class="stat-card feat fade-up">
+        <div class="stat-emoji">📈</div>
+        <div class="stat-v">95%</div>
+        <div class="stat-lbl">Post-Placement Retention</div>
+        <div class="stat-desc">Industry avg: 75–85% · I deliver 95%</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-emoji">⚡</div>
+        <div class="stat-v">20+</div>
+        <div class="stat-lbl">Placements · Last 3 Months</div>
+        <div class="stat-desc">6–8 placements/month based on requirement</div>
+      </div>
+      <div class="stat-card feat fade-up">
+        <div class="stat-emoji">🎯</div>
+        <div class="stat-v">₹25 LPA</div>
+        <div class="stat-lbl">Top CTC Placed</div>
+        <div class="stat-desc">Senior L3 architect · Highest placement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SUCCESS STORIES ══════════════ -->
+<section id="stories">
+  <div class="stories-in">
+    <div class="sec-hdr fade-up">
+      <span class="sec-tag">Case Studies</span>
+      <h2 class="sec-title">Transforming Organizations with<br>Strategic Talent Placement</h2>
+      <p class="sec-desc">Real results from real client relationships — each engagement built on domain expertise, quality screening, and long-term commitment.</p>
+    </div>
+    <div class="stories-grid">
+
+      <div class="story fade-up">
+        <div class="story-hdr">
+          <div class="story-num">01</div>
+          <div class="story-cat">Scale-Up Talent Development</div>
+          <h3 class="story-title">Building Internal Talent Pipelines for Sustained Growth</h3>
+        </div>
+        <div class="story-body">
+          <ul class="res-list">
+            <li>Delivered 6–8 candidates monthly based on requirement to partner organizations</li>
+            <li>Achieved 95% post-placement retention across all engagements</li>
+            <li>20+ placements within 3 months across multiple technology partners</li>
+            <li>Generated ₹15+ Lac in revenue from internal talent programs</li>
+            <li>100% candidate satisfaction with placement outcomes</li>
+          </ul>
+          <div class="story-quote">"Strategic talent sourcing combined with meticulous technical screening ensures placements that thrive, not just survive."</div>
+        </div>
+      </div>
+
+      <div class="story fade-up">
+        <div class="story-hdr">
+          <div class="story-num">02</div>
+          <div class="story-cat">Executive-Level Placement</div>
+          <h3 class="story-title">Strategic L3 Engineer Placement at Premium Market Value</h3>
+        </div>
+        <div class="story-body">
+          <ul class="res-list">
+            <li>Successfully placed L3 Engineer at ₹25 LPA — highest placement value</li>
+            <li>Ensured technical excellence and leadership readiness</li>
+            <li>Seamless onboarding with 95% retention post-placement</li>
+            <li>Demonstrated high-value executive recruitment capability</li>
+          </ul>
+          <div class="story-quote">"Premium placements require premium expertise. Deep technical knowledge and strategic negotiation distinguish truly valuable recruiting partnerships."</div>
+        </div>
+      </div>
+
+      <div class="story fade-up">
+        <div class="story-hdr">
+          <div class="story-num">03</div>
+          <div class="story-cat">Specialized Domain Mastery</div>
+          <h3 class="story-title">Cybersecurity Talent Acquisition with Technical Precision</h3>
+        </div>
+        <div class="story-body">
+          <ul class="res-list">
+            <li>Placed multiple cybersecurity professionals across client organizations</li>
+            <li>Maintained 95% retention rate across all cybersecurity placements</li>
+            <li>Enabled clients to strengthen security posture with qualified talent</li>
+            <li>Built reputation for specialized cybersecurity recruiting excellence</li>
+          </ul>
+          <div class="story-quote">"Specialized domains demand specialized recruiters. My commitment to mastering technical landscapes ensures candidates aren't just qualified — they're exceptional."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROCESS ══════════════ -->
+<section id="process">
+  <div class="proc-in">
+    <div class="sec-hdr fade-up">
+      <span class="sec-tag">My Approach</span>
+      <h2 class="sec-title">Recruitment Excellence Framework</h2>
+      <p class="sec-desc">My four-stage recruitment process designed to deliver exceptional talent that thrives in your organization long-term.</p>
+    </div>
+    <div class="proc-grid">
+
+      <div class="proc-card fade-up">
+        <div class="proc-num">01</div>
+        <span class="proc-icon">🎓</span>
+        <h3>Deep Domain Immersion</h3>
+        <p>Before placing a single candidate, I invest time understanding your technical needs, culture, and strategic objectives.</p>
+        <div class="proc-acts">
+          <span class="proc-act">Comprehensive role requirement analysis</span>
+          <span class="proc-act">Technical domain mastery for your hiring needs</span>
+          <span class="proc-act">Compensation benchmarking &amp; market analysis</span>
+        </div>
+      </div>
+
+      <div class="proc-card fade-up">
+        <div class="proc-num">02</div>
+        <span class="proc-icon">🔍</span>
+        <h3>Precision Candidate Screening</h3>
+        <p>Every candidate undergoes rigorous technical evaluation, domain knowledge assessment, and cultural alignment verification.</p>
+        <div class="proc-acts">
+          <span class="proc-act">Multi-source sourcing — LinkedIn, networks, referrals</span>
+          <span class="proc-act">Technical resume screening with domain expertise</span>
+          <span class="proc-act">Behavioral &amp; cultural fit evaluation</span>
+        </div>
+      </div>
+
+      <div class="proc-card fade-up">
+        <div class="proc-num">03</div>
+        <span class="proc-icon">🤝</span>
+        <h3>Strategic Placement &amp; Negotiation</h3>
+        <p>Facilitate seamless alignment through expert salary negotiation, expectation setting, and placement logistics.</p>
+        <div class="proc-acts">
+          <span class="proc-act">Multi-round interview coordination</span>
+          <span class="proc-act">Salary negotiation &amp; offer structuring</span>
+          <span class="proc-act">Onboarding support &amp; transition coordination</span>
+        </div>
+      </div>
+
+      <div class="proc-card fade-up">
+        <div class="proc-num">04</div>
+        <span class="proc-icon">📈</span>
+        <h3>Sustained Partnership &amp; Retention</h3>
+        <p>My commitment doesn't end at placement. Ongoing engagement maintains 95%+ retention rates across all partners.</p>
+        <div class="proc-acts">
+          <span class="proc-act">30–90 day post-placement check-ins</span>
+          <span class="proc-act">Candidate integration support</span>
+          <span class="proc-act">Continuous relationship building</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<section id="cta">
+  <div class="cta-in">
+
+    <div class="cta-left">
+      <span class="sec-tag" style="background:rgba(46,204,116,.1);color:var(--green);">Let's Connect</span>
+      <h2 class="sec-title" style="color:#fff;text-align:left;">
+        Increase Your Hiring<br>Success Rate with<br>
+        <span class="cta-hl">Strategic Recruitment</span>
+      </h2>
+      <p class="cta-desc">Whether you're looking to hire elite IT talent, scale your internal team, or develop a sustainable recruitment strategy — I bring proven expertise, meticulous standards, and a commitment to your organizational success.</p>
+      <div class="cta-btns">
+        <a href="mailto:sahirakhanamkhan@gmail.com" class="btn-cp"><i class="fas fa-envelope"></i>Connect With Me</a>
+        <a href="tel:9032360321" class="btn-cs"><i class="fas fa-phone"></i>Schedule a Call</a>
+      </div>
+    </div>
+
+    <div class="cta-card">
+      <div class="c-hdr">
+        <div class="c-avatar"><img src="assests/sahira.png" alt="Sheik Sahira"></div>
+        <div>
+          <div class="c-name">SHEIK SAHIRA</div>
+          <div class="c-title">IT Recruiter · Talent Acquisition Specialist</div>
+        </div>
+      </div>
+      <div class="c-rows">
+        <div class="c-row">
+          <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Hyderabad, India</span>
+        </div>
+        <div class="c-row">
+          <div class="c-icon"><i class="fas fa-phone"></i></div>
+          <a href="tel:9032360321">+91 9032360321</a>
+        </div>
+        <div class="c-row">
+          <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <a href="mailto:sahirakhanamkhan@gmail.com">sahirakhanamkhan@gmail.com</a>
+        </div>
+        <div class="c-row">
+          <div class="c-icon"><i class="fab fa-linkedin"></i></div>
+          <a href="https://www.linkedin.com/in/sahira-khanam-533807401/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ TRUST SIGNALS ══════════════ -->
+<section id="trust">
+  <div class="trust-in">
+    <div class="sec-hdr fade-up">
+      <span class="sec-tag">Why Partner With Me</span>
+      <h2 class="sec-title">Why Organizations Trust<br>Me</h2>
+    </div>
+    <div class="trust-box fade-up">
+      <div class="trust-item">
+        <div class="trust-icon">📊</div>
+        <h4>Proven Track Record</h4>
+        <ul class="trust-list">
+          <li>50+ strategic IT placements across enterprise &amp; startup environments</li>
+          <li>₹15+ Lac in verified placement revenue generation</li>
+          <li>29+ active client partnerships with consistent repeat business</li>
+        </ul>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🎯</div>
+        <h4>Exceptional Retention Metrics</h4>
+        <ul class="trust-list">
+          <li>95% post-placement retention (industry benchmark: 75–85%)</li>
+          <li>20+ successful placements in last 3 months alone</li>
+          <li>5–6 monthly placement consistency with 100% satisfaction</li>
+        </ul>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🧠</div>
+        <h4>Specialized Expertise</h4>
+        <ul class="trust-list">
+          <li>Deep technical domain mastery before recruitment begins</li>
+          <li>Expertise across Networking, Cybersecurity, Infrastructure &amp; Dev</li>
+          <li>Placed professionals at compensation levels up to ₹25 LPA</li>
+        </ul>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🏢</div>
+        <h4>Enterprise-Grade Partnerships</h4>
+        <ul class="trust-list">
+          <li>Trusted by LTI Mindtree, Nipun Net, KEYARC IT, Tejas Networks</li>
+          <li>Consistent repeat business from satisfied client organizations</li>
+          <li>References available from multiple industry leaders</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq">
+  <div class="faq-in">
+
+    <div class="faq-left">
+      <div class="sec-hdr" style="text-align:left;">
+        <span class="sec-tag">Frequently Asked</span>
+        <h2 class="sec-title">Common Questions About<br>Strategic IT Recruitment</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How do you ensure candidate quality and long-term retention?
+            <span class="faq-tog">+</span>
+          </button>
+          <div class="faq-ans">
+            <div class="faq-ans-in">Every candidate undergoes rigorous technical screening, domain knowledge assessment, and cultural fit evaluation before presentation. My 95% retention rate reflects this commitment to quality placements that truly succeed. I invest in understanding both the candidate's aspirations and your organizational needs, ensuring alignment that lasts.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What makes your recruiting approach different?
+            <span class="faq-tog">+</span>
+          </button>
+          <div class="faq-ans">
+            <div class="faq-ans-in">I don't just source candidates — I master your industry and technical requirements first. Before screening begins, I develop deep expertise in the domain I'm hiring for. This ensures every placement isn't just qualified, but genuinely exceptional and immediately productive.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What IT specializations do you cover?
+            <span class="faq-tog">+</span>
+          </button>
+          <div class="faq-ans">
+            <div class="faq-ans-in">My primary expertise is IT Networking (L1, L2, L3 Engineers, System Admins), with secondary specializations in Cybersecurity, Project Management, Java &amp; Python Development. Recent placements range from entry-level freshers to senior L3 Architects commanding ₹25 LPA+.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What's your typical hiring timeline?
+            <span class="faq-tog">+</span>
+          </button>
+          <div class="faq-ans">
+            <div class="faq-ans-in">I typically deliver 6–8 candidates monthly based on requirement per engagement. Complex senior placements (L3 level) may require 4–8 weeks, while entry-level positions often close within 2–3 weeks. Timelines depend on role complexity and compensation expectations.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do you work with startups and enterprises equally?
+            <span class="faq-tog">+</span>
+          </button>
+          <div class="faq-ans">
+            <div class="faq-ans-in">Yes. I've successfully partnered with enterprise organizations (LTI Mindtree), mid-market technology companies (Nipun Net Solutions, KEYARC IT Solutions, Tejas Networks), and high-growth startups (iNomax, Krishnas Technologies, Ingrow, Blue Cloud). The approach adapts to organizational stage while maintaining quality standards.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="faq-vis">
+      <div class="faq-vis-card fade-up">
+        <h3>Ready to Build Your High-Performance IT Team?</h3>
+        <p>Let's discuss your talent acquisition strategy and explore how strategic recruitment can accelerate your organizational growth.</p>
+        <div class="faq-stats">
+          <div class="faq-sbox"><div class="v">50+</div><div class="l">Placements</div></div>
+          <div class="faq-sbox"><div class="v">95%</div><div class="l">Retention</div></div>
+          <div class="faq-sbox"><div class="v">29+</div><div class="l">Clients</div></div>
+          <div class="faq-sbox"><div class="v">₹15+ Lac</div><div class="l">Revenue</div></div>
+        </div>
+        <a href="mailto:sahirakhanamkhan@gmail.com" class="btn-faq"><i class="fas fa-envelope"></i>Get In Touch</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ NEWSLETTER ══════════════ -->
+<div class="nwsl">
+  <div class="nwsl-in">
+    <div class="nwsl-txt">
+      <h4>Stay Updated on IT Talent Insights</h4>
+      <p>Get hiring insights, salary benchmarks &amp; recruitment best practices delivered to your inbox</p>
+    </div>
+    <div class="nwsl-form">
+      <input class="nwsl-input" type="email" placeholder="Enter your email address">
+      <button class="nwsl-btn">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="foot-in">
+    <div class="foot-top">
+
+      <div>
+        <a href="#" class="logo foot-logo">Sahira Khanam<span>.</span></a>
+        <p class="foot-tag">Specializing in strategic IT talent acquisition with 50+ successful placements, ₹15+ Lac in revenue generation, and my work with India's leading technology enterprises. 95% candidate retention rate.</p>
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/in/sahira-khanam-533807401/" target="_blank" rel="noopener" class="soc-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="soc-btn"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:sahirakhanamkhan@gmail.com" class="soc-btn"><i class="fas fa-envelope"></i></a>
+          <a href="tel:9032360321" class="soc-btn"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h5>Services</h5>
+        <ul class="foot-links">
+          <li><a href="#expertise">IT Talent Acquisition</a></li>
+          <li><a href="#spec">Networking Recruitment</a></li>
+          <li><a href="#spec">Cybersecurity Hiring</a></li>
+          <li><a href="#spec">Software Dev Recruitment</a></li>
+          <li><a href="#process">Strategic Consulting</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>IT Domains</h5>
+        <ul class="foot-links">
+          <li><a href="#">L1 / L2 / L3 Network Engineers</a></li>
+          <li><a href="#">System Administrators</a></li>
+          <li><a href="#">SOC Analysts</a></li>
+          <li><a href="#">Java / Python Developers</a></li>
+          <li><a href="#">Project Managers</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <div class="foot-c"><i class="fas fa-map-marker-alt ic"></i><span>Hyderabad, India</span></div>
+        <div class="foot-c"><i class="fas fa-phone ic"></i><a href="tel:9032360321">+91 9032360321</a></div>
+        <div class="foot-c"><i class="fas fa-envelope ic"></i><a href="mailto:sahirakhanamkhan@gmail.com">sahirakhanamkhan@gmail.com</a></div>
+        <div class="foot-c"><i class="fab fa-linkedin ic"></i><a href="https://www.linkedin.com/in/sahira-khanam-533807401/" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+      </div>
+
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-copy">© 2026 <span>Sheik Sahira</span> · IT Talent Acquisition Specialist · All rights reserved.</p>
+      <p class="foot-copy">Hyderabad, India</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger   = document.getElementById('hamburger');
+  const mobileMenu  = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  function closeMobileMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Close menu on outside click
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('vis'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // Count-up animation for stats strip
+  function animateCount(el, target, duration, prefix, suffix) {
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    let startTime = null;
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      el.textContent = prefix + Math.round(easeOut(progress) * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const stripObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.s-stat-v[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            animateCount(
+              el,
+              parseInt(el.dataset.target),
+              1600,
+              el.dataset.prefix || '',
+              el.dataset.suffix || ''
+            );
+          }, i * 120);
+        });
+        stripObs.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+
+  const stripEl = document.getElementById('strip');
+  if (stripEl) stripObs.observe(stripEl);
+
+  // Nav scroll behavior
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').style.background =
+      window.scrollY > 60 ? 'rgba(11,36,22,.99)' : 'rgba(11,36,22,.95)';
+  });
+</script>
+</body>
+</html>
