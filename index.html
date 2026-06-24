@@ -403,7 +403,15 @@
 
     /* Grids → 1 col on mobile */
     .hero-in          { grid-template-columns:1fr; gap:0; }
-    .hero-img-wrap    { display:none; }
+    .hero-img-wrap    { display:flex; justify-content:center; margin-top:36px; padding:14px 0 56px; }
+    .hero-frame       { width:230px; height:285px; }
+    .fc               { min-width:116px; padding:8px 11px; gap:7px; }
+    .fc-icon          { width:28px; height:28px; font-size:.78rem; }
+    .fc-val           { font-size:.88rem; }
+    .fc-lbl           { font-size:.58rem; }
+    .fc-1             { top:4px; right:0; }
+    .fc-2             { bottom:62px; left:0; }
+    .fc-3             { top:122px; right:0; }
     .exp-grid         { grid-template-columns:1fr; }
     .spec-grid        { grid-template-columns:1fr; }
     .spec-side        { grid-template-columns:1fr 1fr; }
@@ -582,7 +590,7 @@
 
     <!-- Left: Content -->
     <div class="hero-content">
-      <div class="h-badge">#1 IT Talent Acquisition Specialist</div>
+      <div class="h-badge">29 Enterprise Clients. 95% Retention.</div>
       <h1 class="h-title">
         Strategic IT<br>Talent Acquisition<br>
         <span class="hl">That Transforms</span><br>
